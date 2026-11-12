@@ -83,6 +83,7 @@
     };
 
     const togglePlayback = () => {
+      console.log('--- DATA ---', '');
       if (!audio.src) return;
 
       if (audio.paused) {
