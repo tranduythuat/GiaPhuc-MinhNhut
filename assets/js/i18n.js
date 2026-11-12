@@ -103,7 +103,7 @@
             "rsvp.vegetarian": "Vegetarian Meal",
             "rsvp.messageSubtitle": "SEND US SOME LOVE ^^",
             "rsvp.messagePlaceholder": "Any wishes or messages for the happy couple?",
-            "rsvp.submit": "Confirm RSVP",
+            "rsvp.submit": "Confirm",
             "yenstudio.textMain": "SEE YOU THERE!",
             "quick_actions.map": "Map",
             "quick_actions.rsvp": "RSVP"
