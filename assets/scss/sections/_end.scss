@@ -1,0 +1,145 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.end {
+    width: 100%;
+
+    .content {
+        width: 100%;
+
+        .text {
+            letter-spacing: 1px;
+            color: $text-color;
+            font-size: 12px;
+            margin-bottom: 2%;
+        }
+
+        .en-text {
+            display: inline-block;
+            color: $text-color;
+            margin-bottom: 5%;
+        }
+
+        .countdown {
+            width: 100%;
+            @include flex-center;
+            flex-direction: column;
+            margin: 5% 0 10%;
+
+            .divider img {
+                width: 32px;
+                height: auto;
+                margin-bottom: 5%;
+            }
+
+            .title {
+                font-size: 40px;
+                font-family: $font-DK-Cool-Crayonr;
+                line-height: 1;
+                margin-bottom: 1%;
+                color: $title-color;
+            }
+
+            .en-title {
+                font-size: 18px;
+                color: $text-color;
+                margin-bottom: 5%;
+            }
+
+            .sub_text {
+                letter-spacing: 1.2px;
+                // font-family: $font-gotham;
+                color: $text-color;
+                font-size: 12px;
+            }
+
+            .en-sub_text {
+                margin: 1% 0 5%;
+                letter-spacing: 1.2px;
+                // font-family: $font-gotham;
+                color: $text-color;
+                font-size: 12px;
+            }
+
+            .countdown-box {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 1;
+                width: 85%;
+                gap: 3%;
+
+                .time-box {
+                    text-align: center;
+                    flex: 1;
+                    background: rgba($secondary-color, 0.5);
+                    border: 1px solid $title-color;
+                    backdrop-filter: blur(1px);
+                    color: $title-color;
+                    padding: 2% 0;
+                    border-radius: 10px;
+                    position: relative;
+
+                    .number {
+                        font-size: 32px;
+                        font-weight: 100;
+                        line-height: 1;
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                        z-index: 1;
+                        position: relative;
+                    }
+
+                    .label {
+                        font-size: 10.5px;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        z-index: 1;
+                        position: relative;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            .text {
+                letter-spacing: calc((1 / 500) * 100vw);
+                font-size: calc((12 / 500) * 100vw);
+            }
+
+            .countdown {
+                .title {
+                    font-size: calc((40 / 500) * 100vw);
+                    // letter-spacing: calc((3 / 500) * 100vw);
+                }
+
+                .en-title {
+                    font-size: calc((18 / 500) * 100vw);
+                }
+
+                .sub_text,
+                .en-sub_text {
+                    font-size: calc((12 / 500) * 100vw);
+                    letter-spacing: calc((1.2 / 500) * 100vw);
+                }
+
+                .countdown-box {
+                    .time-box {
+                        .number {
+                            font-size: calc((32 / 500) * 100vw);
+                        }
+
+                        .label {
+                            font-size: calc((10.5 / 500) * 100vw);
+                            letter-spacing: calc((1 / 500) * 100vw);
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}

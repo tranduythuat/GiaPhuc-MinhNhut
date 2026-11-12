@@ -1,0 +1,45 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.container-first {
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 3732;
+    background:
+        // url('../../assets/images/IMG_3962.GIF') no-repeat 50% 99.5% / contain,
+        url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/GiaPhuc-MinhNhut/base_bg_01.jpg') no-repeat center / cover;
+
+    position: relative;
+
+    .text-img {
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        // margin-top: 70%;
+        perspective: 500px;
+
+        img {
+            max-width: 104px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .text-img {
+            img {
+                max-width: calc((104 / 500) * 100vw);
+            }
+        }
+    }
+}
+
+.container-second {
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 1457;
+    background:
+        // url('../../assets/images/IMG_3962.GIF') no-repeat 50% 99.5% / contain,
+        url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/GiaPhuc-MinhNhut/base_bg_02.png') no-repeat center / cover;
+}

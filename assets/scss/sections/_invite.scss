@@ -1,0 +1,190 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invite {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        padding-top: 3%;
+        padding-bottom: 20%;
+
+        .message {
+            font-size: 15px;
+            font-family: $font-DK-Cool-Crayonr;
+            color: $text-color;
+
+            p {
+                margin-bottom: 4%;
+            }
+        }
+
+        .welcome {
+            font-size: 13.5px;
+            color: $secondary-color;
+            margin-top: 14%;
+        }
+
+        .couple-name {
+            font-family: $font-DK-Cool-Crayonr;
+            color: $title-color;
+            font-size: 37px;
+            margin-top: 6%;
+        }
+
+        .couple-image {
+            perspective: 1000px;
+            position: relative;
+            // left: -3%;
+            margin: 0 auto;
+            margin-bottom: 2%;
+            margin-top: 5%;
+
+            img {
+                max-width: 485px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .time {
+            font-size: 26px;
+            color: $pink-color;
+            margin-bottom: 3%;
+        }
+
+        .label {
+            color: $secondary-color;
+            font-size: 13.5px;
+            margin-top: 5%;
+        }
+
+        .location {
+            font-size: 32px;
+            font-family: $font-DK-Cool-Crayonr;
+            color: $pink-color;
+            margin: 2% 0 2%;
+        }
+
+        .hall {
+            font-size: 15px;
+        }
+
+        .address {
+            color: $secondary-color;
+        }
+
+        .en-address {
+            color: #503b28ff;
+            font-size: 11px;
+        }
+
+        .map-img {
+            margin: 5% auto 1%;
+
+            img {
+                max-width: 443px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .map-btn-box {
+            position: relative;
+
+            .map-icon {
+                max-width: 18px;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                left: 17%;
+                bottom: 18%;
+            }
+
+            .mouse-icon {
+                max-width: 22px;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                left: 74%;
+                bottom: -50%;
+            }
+        }
+
+        .map-btn {
+            position: relative;
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            background-color: $title-color;
+            max-width: 158px;
+            width: 100%;
+            padding: 1% 0 0.5%;
+            aspect-ratio: 158 / 18;
+            font-family: $font-gilroy;
+            @include flex-center;
+            border-radius: 10px;
+            margin: auto;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+
+        @media (max-width: 500px) {
+            .message {
+                font-size: calc((15 / 500) * 100vw);
+            }
+
+            .welcome {
+                font-size: calc((13.5 / 500) * 100vw);
+            }
+
+            .couple-intro {
+                .img-box {
+                    max-width: calc((180 / 500) * 100vw);
+                }
+            }
+
+            .couple-name {
+                font-size: calc((33 / 500) * 100vw);
+            }
+
+            .couple-image {
+                img {
+                    max-width: calc((362 / 500) * 100vw);
+                }
+            }
+
+            .time {
+                font-size: calc((26 / 500) * 100vw);
+            }
+
+            .location {
+                font-size: calc((42 / 500) * 100vw);
+            }
+
+            .map-img {
+                img {
+                    max-width: calc((443 / 500) * 100vw);
+                }
+            }
+
+            .map-btn-box {
+                .map-icon {
+                    max-width: calc((18 / 500) * 100vw);
+                }
+
+                .mouse-icon {
+                    max-width: calc((22 / 500) * 100vw);
+                }
+            }
+
+            .map-btn {
+                font-size: calc((16 / 500) * 100vw);
+                max-width: calc((158 / 500) * 100vw);
+            }
+        }
+    }
+}

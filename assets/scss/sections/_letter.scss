@@ -1,0 +1,80 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.letter-section {
+    width: 100%;
+    max-width: 500px;
+
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 891;
+        background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/ngan-duc/letter.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        color: $text-color;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.439);
+        position: relative;
+        cursor: pointer;
+        perspective: 1000px;
+        padding-bottom: 23%;
+
+        .subtext {
+            font-family: $font-lora;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .en-subtext {
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 30%;
+            left: 55%;
+            width: 80px;
+            height: auto;
+            display: block;
+            animation: arrowPulse 1.5s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+    }
+
+    @keyframes arrowPulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(1.12);
+            opacity: 0.9;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .subtext {
+                font-size: calc((16 / 500) * 100vw);
+            }
+
+            .en-subtext {
+                font-size: calc((11 / 500) * 100vw);
+            }
+
+            .arrow {
+                width: calc((80 / 500) * 100vw);
+            }
+        }
+    }
+}

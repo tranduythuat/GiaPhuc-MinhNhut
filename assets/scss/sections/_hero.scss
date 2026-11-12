@@ -1,0 +1,131 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 750;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        .logo {
+            perspective: 500px;
+            margin-top: 8%;
+
+            img {
+                max-width: 90px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .couple-name {
+            position: absolute;
+            top: 14%;
+            z-index: 5;
+
+            img {
+                max-width: 466px;
+                width: 100%;
+                height: auto;
+            }
+
+            // margin: 0 auto 72%;
+            // font-family: $font-DK-Cool-Crayonr;
+            // font-size: 42px;
+            // color: #f5eddaff;
+            // transform: rotate(-5deg) translateX(5%);
+
+            // span {
+            //     display: block;
+
+            //     &.husband {
+            //         text-align: left;
+            //         position: relative;
+            //         left: -10%;
+            //         margin-bottom: 5%;
+            //     }
+
+            //     &.wife {
+            //         text-align: right;
+            //     }
+            // }
+        }
+
+        .dragon {
+            position: absolute;
+            max-width: 161px;
+            width: 100%;
+            height: auto;
+            z-index: 4;
+            left: 0%;
+            top: 5%;
+        }
+
+        .ball {
+            position: absolute;
+            max-width: 40px;
+            width: 100%;
+            height: auto;
+            top: 20%;
+            right: 24%;
+        }
+
+        .date {
+            color: $pink-color;
+            margin-bottom: 3%;
+
+            .time {
+                font-size: 23px;
+            }
+        }
+
+        .meo-two {
+            position: absolute;
+            bottom: -4%;
+            right: 2%;
+            max-width: 204px;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 500px) {
+            .logo {
+                img {
+                    max-width: calc((90 / 500) * 100vw);
+                }
+            }
+
+            .couple-name {
+                // font-size: calc((42 / 500) * 100vw);
+
+                img {
+                    max-width: calc((466 / 500) * 100vw);
+                }
+            }
+
+            .dragon {
+                max-width: calc((161 / 500) * 100vw);
+            }
+
+            .ball {
+                max-width: calc((40 / 500) * 100vw);
+            }
+
+            .date {
+                .time {
+                    font-size: calc((23 / 500) * 100vw);
+                }
+            }
+
+            .meo-two {
+                max-width: calc((204 / 500) * 100vw);
+            }
+        }
+    }
+}

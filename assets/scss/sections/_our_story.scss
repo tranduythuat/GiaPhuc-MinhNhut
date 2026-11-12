@@ -1,0 +1,186 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.our-story {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding: 10% 0;
+        perspective: 100px;
+
+        .title {
+            font-family: $font-BigelowRules-Regular;
+            font-size: 70px;
+            color: $title-color;
+        }
+
+        .divider {
+            margin: 1% 0 5%;
+            perspective: 1000px;
+            img {
+                max-width: 117px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .paragraph {
+            padding: 0 13%;
+            font-size: 16px;
+
+            p {
+                margin-bottom: 5%;
+            }
+
+            &.first {
+                text-align: justify;
+                text-align-last: center;
+                margin-bottom: 8%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 5%;
+                }
+            }
+
+            &.second {
+                display: flex;
+                margin-bottom: 10%;
+
+                .image {
+                    flex: 3;
+                    @include flex-center;
+
+                    img {
+                        max-width: 164px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .text {
+                    flex: 3.5;
+                    text-align: justify;
+                    padding-left: 4%;
+
+                    p:nth-of-type(2) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &.third {
+                max-width: 412px;
+                width: 100%;
+                aspect-ratio: 412 / 350;
+                background: url('../../assets/images/text_bg.png') no-repeat 0% 0% / 100%;
+                position: relative;
+                margin-bottom: 10%;
+
+                .couple9 {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    max-width: 220px;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .text144 {
+                    position: absolute;
+                    bottom: 36%;
+                    left: 6%;
+                    max-width: 212px;
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    bottom: 36%;
+                    left: 6%;
+                }
+            }
+
+            &.four {
+                p {
+                    margin-bottom: 8%;
+                    text-align: justify;
+                    text-align-last: center;
+
+                    &.highlight {
+                        display: inline-block;
+                        padding: 0 4%;
+                        background-color: #efd3deff;
+                        margin-bottom: 3%;
+                    }
+                }
+
+                .image {
+                    margin-bottom: 4%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .divider {
+                    perspective: 500px;
+                    img {
+                        max-width: 25px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((70 / 500) * 100vw);
+            }
+
+            .divider {
+                img {
+                    max-width: calc((117 / 500) * 100vw);
+                }
+            }
+
+            .paragraph {
+                font-size: calc((16 / 500) * 100vw);
+                &.second {
+                    .image {
+                        img {
+                            max-width: calc((164 / 500) * 100vw);
+                        }
+                    }
+                }
+
+                &.third {
+                    max-width: calc((412 / 500) * 100vw);
+                    .couple9 {
+                        max-width:calc((220 / 500) * 100vw);
+                    }
+
+                    .text144 {
+                        max-width: calc((212 / 500) * 100vw);
+                    }
+                }
+
+                &.four {
+                    .divider {
+                        img {
+                            max-width: calc((25 / 500) * 100vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

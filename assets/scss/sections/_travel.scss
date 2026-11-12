@@ -1,0 +1,160 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.travel {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 868;
+        background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/lanz-yang-ha-my/travel_bg.png') no-repeat center / cover;
+        padding: 18%;
+
+        .title {
+            font-size: 70px;
+            font-family: $font-BigelowRules-Regular;
+            color: $title-color;
+            margin-bottom: 2%;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            margin-bottom: 5%;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2%;
+
+            .radio-wrapper {
+                position: relative;
+                height: 32px;
+                margin-bottom: 2%;
+            }
+
+            .radio-wrapper input[type="radio"] {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            .radio-label {
+                @include flex-center;
+                text-transform: uppercase;
+                font-family: $font-Aboreto-Regular;
+                font-size: 8px;
+                // padding: 4% 0;
+                height: 100%;
+                line-height: 1.2;
+                border-radius: 8px;
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-align: center;
+                border: 2px solid $title-color;
+
+                &:hover {
+                    background: $title-color;
+                    color: white;
+                }
+            }
+
+            .radio-wrapper input[type="radio"]:checked+.radio-label {
+                background: $title-color;
+                color: white;
+            }
+        }
+
+        .divider {
+            margin: 8%;
+
+            img {
+                max-width: 13px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .second-title {
+            font-size: 46px;
+            font-family: $font-BigelowRules-Regular;
+            color: $title-color;
+            margin-bottom: 5%;
+        }
+
+        .info-table {
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: serif;
+
+            .table-block {
+                border: 2px solid $title-color;
+                margin-bottom: 6%;
+            }
+
+            .table-title {
+                font-family: $font-Aboreto-Regular;
+                text-align: center;
+                font-size: 13px;
+                padding: 3%;
+                border-bottom: 2px solid $title-color;
+            }
+
+            .table-row {
+                font-family: $font-lora;
+                font-weight: 300;
+                text-align: center;
+                padding: 3%;
+                border-bottom: 1px solid $title-color;
+
+                a {
+                    color: #231f20ff;
+                }
+            }
+
+            .table-row:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((70 / 500) * 100vw);
+            }
+    
+            .subtitle {
+                font-size:calc((16 / 500) * 100vw);
+            }
+    
+            .button-group {
+                .radio-wrapper {
+                    height: calc((32 / 500) * 100vw);
+                }
+    
+                .radio-label {
+                    font-size:calc((8 / 500) * 100vw);
+                    // padding: 4% 0;
+                }
+            }
+    
+            .divider {
+                img {
+                    max-width: calc((13 / 500) * 100vw);
+                }
+            }
+    
+            .second-title {
+                font-size: calc((46 / 500) * 100vw);
+            }
+    
+            .info-table {
+                .table-title {
+                    font-size: calc((13 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

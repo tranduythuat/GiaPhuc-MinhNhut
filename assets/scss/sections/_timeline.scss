@@ -1,0 +1,188 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.timeline {
+    width: 100%;
+    // background-color: #6eade0;
+
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 808;
+        // background: url('../../assets/images/line_tl_bg.png') no-repeat center / 100%;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        color: #503b28;
+
+        .title {
+            font-family: $font-DK-Cool-Crayonr;
+            font-size: 35px;
+            font-weight: 300;
+            margin-top: 30%;
+            margin-bottom: 8%;
+            color: $title-color;
+            z-index: 5;
+        }
+
+        .wax {
+            position: absolute;
+            top: -8%;
+            max-width: 129px;
+            width: 100%;
+            height: auto;
+        }
+
+        .dragon {
+            position: absolute;
+            bottom: 12%;
+            right: 5%;
+            max-width: 121px;
+            width: 100%;
+            height: auto;
+        }
+
+        .timeline_bg {
+            position: absolute;
+            width: 100%;
+            top: -15%;
+            z-index: 1;
+        }
+    }
+
+    .items {
+        margin-top: 1%;
+        width: 100%;
+        z-index: 10;
+
+        .item {
+            margin-bottom: 6%;
+
+            .icon {
+                @include flex-center;
+                margin-bottom: 1%;
+
+                img {
+                    max-width: 30px;
+                    width: 100%;
+                    height: auto
+                }
+            }
+
+            .time {
+                @include flex-center;
+                flex-direction: column;
+                font-size: 13px;
+                color: $title-color;
+
+                i {
+                    font-size: 11px;
+                }
+            }
+
+            &:nth-of-type(2) .icon img {
+                max-width: 42px;
+            }
+
+            // &:nth-of-type(4) .icon img {
+            //     max-width: 28px;
+            // }
+
+            // &:nth-of-type(5) .icon img {
+            //     max-width: 28px;
+            // }
+        }
+    }
+
+    .dresscode {
+        margin-top: 19%;
+
+        .title {
+            margin-bottom: 0%;
+        }
+
+        .subtext {
+            font-size: 14px;
+            margin-bottom: 2%;
+        }
+
+        .palette {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+
+            .swatch {
+                max-width: 31px;
+                aspect-ratio: 1;
+                width: 100%;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.223);
+                margin: 0 -4px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((35 / 500) * 100vw);
+            }
+
+            .wax {
+                max-width: calc((129 / 500) * 100vw);
+            }
+
+            .dragon {
+                max-width: calc((121 / 500) * 100vw);
+            }
+        }
+
+        .items {
+            .item {
+                .icon {
+                    img {
+                        max-width: calc((30 / 500) * 100vw);
+                    }
+                }
+
+                .time {
+                    font-size: calc((13 / 500) * 100vw);
+                }
+
+                &:nth-of-type(2) .icon img {
+                    max-width: calc((42 / 500) * 100vw);
+                }
+            }
+        }
+
+        .dresscode {
+            .subtext {
+                font-size: calc((14 / 500) * 100vw);
+            }
+
+            .palette {
+                .swatch {
+                    max-width: calc((31 / 500) * 100vw);
+                }
+            }
+        }
+
+        .text-img {
+            img {
+                max-width: calc((104 / 500) * 100vw);
+            }
+        }
+    }
+}
