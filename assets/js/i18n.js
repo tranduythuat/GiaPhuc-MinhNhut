@@ -12,8 +12,8 @@
      * ========================================================= */
     var translations = {
         vi: {
-            "invite_message.p1": "Dear our beloved friend 🤍,<br> Thân mời bạn đến chung vui cùng tụi mình <br> trong buổi tiệc mừng ngày hai đứa chính thức <br> về chung một nhà. 💍",
-            "invite_message.p2": "Sự hiện diện của bạn là niềm vui và món quà ý nghĩa <br> nhất dành cho tụi mình trong dịp đặc biệt này.♡",
+            "invite_message.p1": "Dear our beloved friend 🤍,<br> Thân mời bạn đến chung vui cùng chúng mình <br> trong buổi tiệc mừng ngày hai đứa chính thức <br> về chung một nhà. 💍",
+            "invite_message.p2": "Sự hiện diện của bạn là niềm vui và món quà ý nghĩa <br> nhất dành cho chúng mình trong dịp đặc biệt này.♡",
             "invite_message.p3": "Mong được đón bạn đến chung vui!",
             "invite_message.p4": "With all our love,<br> Gia Phúc & Minh Nhựt 🤍",
             "invite_label_location": "Tại",
