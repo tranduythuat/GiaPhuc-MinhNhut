@@ -63,7 +63,7 @@
 .lang-btn {
     flex: 1 1 130px;
     padding: 12px 16px;
-    border: 1.5px solid #5f82f2ff;
+    border: 1.5px solid #001293ff;
     background: transparent;
     color: #5f82f2ff;
     border-radius: 999px;
@@ -76,8 +76,8 @@
 
 .lang-btn:hover,
 .lang-btn:focus-visible {
-    background: #231f20;
-    color: #f8f3eb;
+    background: #f496bfff;
+    color: #001293ff;
 }
 
 .lang-btn:active {
