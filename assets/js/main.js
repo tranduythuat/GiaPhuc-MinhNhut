@@ -1,6 +1,9 @@
 (() => {
   "use strict";
 
+  var SUPPORTED_LANGS = ["vi", "en"];
+  let currentLang = "vi";
+
   /* ======================================================
        HELPERS
     ====================================================== */
@@ -83,7 +86,6 @@
     };
 
     const togglePlayback = () => {
-      console.log('--- DATA ---', '');
       if (!audio.src) return;
 
       if (audio.paused) {
@@ -97,6 +99,8 @@
     };
 
     document.addEventListener("langchange", () => {
+      currentLang = getLangFromURL();
+      console.log('--- Lang ---', currentLang);
       if (!audio.src) return;
 
       if (audio.paused) {
@@ -622,18 +626,27 @@
     }
   }
 
+  function isSupported(lang) {
+    return SUPPORTED_LANGS.indexOf(lang) !== -1;
+  }
+
+  function getLangFromURL() {
+    var params = new URLSearchParams(window.location.search);
+    var lang = params.get("lang");
+    return isSupported(lang) ? lang : null;
+  }
+
   /* ======================================================
        RSVP
     ====================================================== */
 
-  async function handleFormSubmit(e, lang = "vi", sheet = "nha-trai") {
+  async function handleFormSubmit(e, lang = "vi", sheet = "confirm") {
     e.preventDefault();
 
     // Prevent duplicate submit
     if (isSubmitting) { return; }
 
     const form = e.target;
-
 
     // if (!form) {
     //   console.error("RSVP form not found");
@@ -685,10 +698,10 @@
     const data = Object.fromEntries(formData.entries());
 
     const {
-      name,
-      confirm,
-      guest_number,
-      wish,
+      name = "",
+      confirm = "",
+      guest_number = "",
+      note = "",
     } = data;
 
     // =========================
@@ -704,14 +717,14 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = `?sheet=${sheet}`;
+    const sheetURL = `https://script.google.com/macros/s/AKfycbwj6tartCRmTCc1xEFhP-VF1TZnuJoZDqeB32EyVPh2JCQvWyRQg4tNVbWvUIUm62oD/exec?sheet=${sheet}`;
 
     const controller = new AbortController();
 
     const timeout = setTimeout(() => { controller.abort(); }, 15000);
 
     try {
-      const body = new URLSearchParams({ name, confirm, guest_number, wish, });
+      const body = new URLSearchParams({ name, confirm, guest_number, note });
       const res = await fetch(sheetURL, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8", },
@@ -776,13 +789,15 @@
 
   function initRSVP() {
     const form = document.forms["rsvpForm"];
-    const formNhaTrai = document.forms["rsvpFormNhaTrai"];
+    currentLang = getLangFromURL();
+
+    // const formNhaTrai = document.forms["rsvpFormNhaTrai"];
     if (form) {
-      form.addEventListener("submit", (e) => handleFormSubmit(e, "vi", "nha-gai"));
+      form.addEventListener("submit", (e) => handleFormSubmit(e, currentLang, "confirm"));
     }
-    if (formNhaTrai) {
-      formNhaTrai.addEventListener("submit", (e) => handleFormSubmit(e, "vi", "nha-trai"));
-    }
+    // if (formNhaTrai) {
+    //   formNhaTrai.addEventListener("submit", (e) => handleFormSubmit(e, "vi", "nha-trai"));
+    // }
   }
 
   function initAnimations() {
