@@ -986,22 +986,21 @@ section {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  padding: 6% 0 4%;
   height: 100%;
-  line-height: 1;
+  line-height: 3;
   border-radius: 10px;
   background: transparent;
   color: #001293;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  border: 2px solid #93a7f9;
+  border: 2px solid #5f82f2;
   display: block;
   font-size: 10px;
   font-weight: 600;
 }
 .rsvp .content .rsvp-form .button-group .radio-label:hover {
-  background: #f496bf;
+  background: #5f82f2;
   color: white;
 }
 .rsvp .content .rsvp-form .button-group .radio-label i {
@@ -1009,8 +1008,24 @@ section {
   line-height: 2;
 }
 .rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio]:checked + .radio-label {
-  background: #f496bf;
+  background: #5f82f2;
   color: white;
+}
+.rsvp .content .rsvp-form .button-group.guest_number {
+  grid-template-columns: auto auto auto;
+  gap: 12%;
+}
+.rsvp .content .rsvp-form .button-group.guest_number .radio-label {
+  background: #5f82f2;
+  color: white;
+}
+.rsvp .content .rsvp-form .button-group.guest_number .radio-label:hover {
+  background: #f496bf;
+  border: 2px solid #f496bf;
+}
+.rsvp .content .rsvp-form .button-group.guest_number .radio-wrapper input[type=radio]:checked + .radio-label {
+  background: #f496bf;
+  border: 2px solid #f496bf;
 }
 .rsvp .content .rsvp-form .form-group {
   margin-bottom: 4%;
@@ -1032,6 +1047,9 @@ section {
   color: #001293;
   font-size: 12px;
   font-weight: 300;
+}
+.rsvp .content .rsvp-form .form-group.name input[type=text] {
+  border: 2px solid #f496bf;
 }
 .rsvp .content .rsvp-form .form-group input[type=text]:focus,
 .rsvp .content .rsvp-form .form-group input[type=number]:focus,
@@ -1056,7 +1074,8 @@ section {
   font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 3%;
-  color: #5f82f2;
+  color: #001293;
+  text-align: left;
 }
 .rsvp .content .rsvp-form .form-group .flower1 {
   max-width: 82px;

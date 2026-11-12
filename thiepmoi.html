@@ -257,13 +257,16 @@
             </p> -->
 
             </div>
-            <div class="form-group fade-in" data-animate="fade-in-end">
+            <div class="form-group name fade-in" data-animate="fade-in-end">
+              <p class="subtitle" data-animate="fade-in" data-i18n="rsvp.nameSubtitle">
+                1. WHAT’S YOUR NAME?
+              </p>
               <input type="text" id="name" name="name" placeholder="Your Name" required
                 data-i18n-placeholder="rsvp.namePlaceholder" />
             </div>
             <div class="form-group confirm">
               <p class="subtitle" data-animate="fade-in" data-i18n="rsvp.confirmSubtitle">
-                Will you attend the wedding?
+                2. WILL YOU BE ATTENDING OUR WEDDING?
               </p>
               <div class="button-group" data-animate="fade-in-end">
                 <div class="radio-wrapper">
@@ -281,8 +284,31 @@
               </div>
             </div>
 
-            <div class="form-group guest_diatery_number" data-animate="fade-right" data-animate-scroll-start="top 90%">
-              <select class="form-select" name="guest_diatery_number" data-lang="vi">
+            <div class="form-group guest_number" data-animate="fade-in-end">
+              <p class="subtitle" data-animate="fade-in-end" data-i18n="rsvp.guestNumberSubtitle">
+                3. NUMBER OF GUESTS (INCLUDING YOURSELF)
+              </p>
+              <div class="button-group guest_number" data-animate="fade-in-end">
+                <div class="radio-wrapper">
+                  <input type="radio" id="guest-01" name="guest_number" value="1" />
+                  <label for="guest-01" class="radio-label" data-i18n="rsvp.guest_01">
+                    01 GUEST
+                  </label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" id="guest-02" name="guest_number" value="2" />
+                  <label for="guest-02" class="radio-label" data-i18n="rsvp.guest_02">
+                    02 GUESTS
+                  </label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" id="guest-03" name="guest_number" value="2" />
+                  <label for="guest-03" class="radio-label" data-i18n="rsvp.guest_03">
+                    03 GUESTS
+                  </label>
+                </div>
+              </div>
+              <!-- <select class="form-select" name="guest_diatery_number" data-lang="vi">
                 <option value="" disabled selected data-i18n="rsvp.guests_number">
                   Number Of Guests (Including Yourself)
                 </option>
@@ -291,7 +317,7 @@
                 <option value="3 người" data-i18n="rsvp.guests_number_option3">3 GUESTS</option>
                 <option value="4 người" data-i18n="rsvp.guests_number_option4">4 GUESTS</option>
                 <option value="5 người" data-i18n="rsvp.guests_number_option5">5 GUESTS</option>
-              </select>
+              </select> -->
             </div>
 
             <div class="form-group note" data-animate="fade-in-end">
@@ -330,10 +356,10 @@
             </div>
           </div> -->
 
-            <div class="form-group" data-animate="fade-in-end">
+            <!-- <div class="form-group" data-animate="fade-in-end">
               <textarea id="message" name="wish" data-i18n-placeholder="rsvp.messagePlaceholder"
                 placeholder="Hãy gửi lời chúc đến Cô Dâu và Chú Rể!"></textarea>
-            </div>
+            </div> -->
 
             <button type="submit" class="submit-btn" data-i18n="rsvp.submit">
               CONFIRM <br>
