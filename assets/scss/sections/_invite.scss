@@ -8,6 +8,7 @@
         width: 100%;
         padding-top: 3%;
         padding-bottom: 20%;
+        z-index: 20;
 
         .message {
             font-size: 15px;
@@ -91,6 +92,7 @@
 
         .map-btn-box {
             position: relative;
+            z-index: 100;
 
             .map-icon {
                 max-width: 18px;

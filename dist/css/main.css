@@ -491,6 +491,7 @@ section {
   width: 100%;
   padding-top: 3%;
   padding-bottom: 20%;
+  z-index: 20;
 }
 .invite .content .message {
   font-size: 15px;
@@ -559,6 +560,7 @@ section {
 }
 .invite .content .map-btn-box {
   position: relative;
+  z-index: 100;
 }
 .invite .content .map-btn-box .map-icon {
   max-width: 18px;
@@ -675,7 +677,7 @@ section {
   position: absolute;
   width: 100%;
   top: -15%;
-  z-index: 1;
+  z-index: 10;
 }
 .timeline .items {
   margin-top: 1%;
