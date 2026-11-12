@@ -910,10 +910,10 @@ section {
 }
 @media (max-width: 500px) {
   .pictures .content .flower {
-    max-width: 16vw;
+    max-width: 7vw;
   }
   .pictures .content .flower_pic04 {
-    max-width: 18.2vw;
+    max-width: 24vw;
   }
   .pictures .content .picture {
     max-width: 38vw;
