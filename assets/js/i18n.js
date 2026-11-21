@@ -22,9 +22,10 @@
             "invite.mapButton": 'CLICK ĐỂ XEM BẢN ĐỒ',
 
             "timeline.item1": '<div><span class="bold">17:30</span>&nbsp;- ĐÓN KHÁCH</div>',
-            "timeline.item2": '<div><span class="bold">18:30</span>&nbsp;- LÀM LỄ</div>',
-            "timeline.item3": '<div><span class="bold">19:00</span>&nbsp;- KHAI TIỆC</div>',
-            "timeline.item4": '<div><span class="bold">21:00</span>&nbsp;- AFTER PARTY</div>',
+            "timeline.item2": '<div><span class="bold">18:30</span>&nbsp;- NGHI LỄ</div>',
+            "timeline.item3": '<div><span class="bold">19:30</span>&nbsp;- GAME</div>',
+            "timeline.item4": '<div><span class="bold">20:30</span>&nbsp;- DANCING</div>',
+            "timeline.item5": '<div><span class="bold">21:30</span>&nbsp;- TUNG HOA</div>',
 
             "rsvp.title": "Xác nhận tham dự",
             "rsvp.subtitle":
@@ -73,8 +74,9 @@
 
             "timeline.item1": '<div><span class="bold">17:30</span>&nbsp;- WELCOMING</div>',
             "timeline.item2": '<div><span class="bold">18:30</span>&nbsp;- WEDDING CEREMONY</div>',
-            "timeline.item3": '<div><span class="bold">19:00</span>&nbsp;- DINNER</div>',
-            "timeline.item4": '<div><span class="bold">21:00</span>&nbsp;- AFTER PARTY</div>',
+            "timeline.item3": '<div><span class="bold">19:30</span>&nbsp;- GAME</div>',
+            "timeline.item4": '<div><span class="bold">20:30</span>&nbsp;- DANCING</div>',
+            "timeline.item5": '<div><span class="bold">21:30</span>&nbsp;- BOUQUET TOSS</div>',
 
             "rsvp.title": "Attendance <br>Confirmation",
             "rsvp.subtitle": "Please kindly RSVP <strong>by December 1, 2026</strong>, to help us <br> prepare for your presence on our special day",
